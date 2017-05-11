@@ -307,6 +307,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setenv "PATH" (concat (getenv "PATH") ":~/.spacemacs.d/global-dependencies/node_modules/tern/bin/"))
   (setq exec-path (append exec-path '("~/.spacemacs.d/global-dependencies/node_modules/tern/bin/")))
+  (setenv "PATH" (concat (getenv "PATH") ":~/.spacemacs.d/global-dependencies/node_modules/eslint/bin/"))
+  (setq exec-path (append exec-path '("~/.spacemacs.d/global-dependencies/node_modules/eslint/bin/")))
   )
 
 (defun dotspacemacs/user-config ()
