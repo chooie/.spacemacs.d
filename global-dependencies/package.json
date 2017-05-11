@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "eslint": "^3.19.0",
     "tern": "^0.21.0"
   }
 }
