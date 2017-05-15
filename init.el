@@ -341,7 +341,9 @@ you should place your code here."
   (setq js2-mode-show-strict-warnings nil)
   (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
   (use-package groovy-mode
-    :defer t
+    :ensure t
+    :init
+    (setq groovy-indent-offset 2)
     :config (message "Loaded groovy mode"))
   ;; automodes
   (add-to-list 'auto-mode-alist '("Jenkinsfile$" . groovy-mode))
