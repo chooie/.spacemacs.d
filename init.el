@@ -329,7 +329,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq powerline-default-separator 'utf-8)
-  (setq show-trailing-whitespace t)
+  (setq spacemacs-show-trailing-whitespace t)
   (spacemacs/toggle-indent-guide-globally-on)
   (setq-default indent-tabs-mode nil)
   (setq-default tab-width 2)
