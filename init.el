@@ -295,7 +295,7 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup 'all
    ))
 
 (defun dotspacemacs/user-init ()
@@ -329,6 +329,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq powerline-default-separator 'utf-8)
+  (setq show-trailing-whitespace t)
   (spacemacs/toggle-indent-guide-globally-on)
   (setq-default indent-tabs-mode nil)
   (setq-default tab-width 2)
