@@ -350,9 +350,10 @@ you should place your code here."
     :config (message "Loaded groovy mode"))
   ;; automodes
   (add-to-list 'auto-mode-alist '("Jenkinsfile$" . groovy-mode))
+  ;; Use 'mdfind' for searching instead of 'locate'
+  (setq helm-locate-command "mdfind -name %s %s")
+  (setq helm-locate-fuzzy-match nil)
   )
-
-
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
