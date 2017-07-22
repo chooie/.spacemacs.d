@@ -394,7 +394,6 @@ you should place your code here."
   (setq TeX-view-program-selection '((output-pdf "PDF Viewer")))
   (setq TeX-view-program-list
         '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")))
-
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
