@@ -33,7 +33,8 @@ values."
    '(
      clojure
      yaml
-     auto-completion
+     (auto-completion :variables
+                      auto-completion-enable-snippets-in-popup t)
      better-defaults
      docker
      emacs-lisp
@@ -347,7 +348,7 @@ you should place your code here."
   ;; Minimal dired
   (add-hook 'dired-mode-hook
             (lambda ()
-                   (dired-hide-details-mode t)))
+              (dired-hide-details-mode t)))
   ;; Turn off js2 mode errors & warnings (we lean on eslint/standard)
   (setq js2-mode-show-parse-errors nil)
   (setq js2-mode-show-strict-warnings nil)
