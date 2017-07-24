@@ -1,0 +1,7 @@
+#contributor : Charlie Hebert <charlie.hebert92@gmail.com>
+#name : iife
+# --
+(function() {
+  "use strict";
+  $1
+}());
