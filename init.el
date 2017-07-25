@@ -369,6 +369,7 @@ you should place your code here."
   (setq projectile-globally-ignored-directories
         '("node_modules"
           "babel-out"
+          "generated",
           "coverage"))
 
   ;; Prevent multicursors from prompting all the time when using evil
