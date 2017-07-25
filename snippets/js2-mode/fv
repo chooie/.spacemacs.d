@@ -1,0 +1,6 @@
+#contributor : Charlie Hebert <charlie.hebert92@gmail.com>
+#name : function value with semi-colon
+# --
+function$1($2) {
+  $3
+};
