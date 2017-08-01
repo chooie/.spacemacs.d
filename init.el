@@ -45,7 +45,8 @@ values."
                  js2-basic-offset 2
                  js-indent-level 2)
      (latex :variables
-            latex-build-command "LatexMk")
+            latex-build-command "LatexMk"
+            latex-enable-auto-fill nil)
      markdown
      org
      (ranger :variables
@@ -346,6 +347,7 @@ you should place your code here."
   (setq-default indent-tabs-mode nil)
   (setq-default tab-width 2)
   (setq-default tab-always-indent t)
+
   ;; Minimal dired
   (add-hook 'dired-mode-hook
             (lambda ()
