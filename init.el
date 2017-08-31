@@ -31,13 +31,15 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     (auto-completion :variables
+                      auto-completion-enable-snippets-in-popup t)
      better-defaults
      clojure
      docker
      emacs-lisp
      git
+     helm
      html
-     ivy
      (javascript :variables
                  js2-basic-offset 2
                  js-indent-level 2)
