@@ -337,15 +337,6 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq custom-file ".spacemacs-custom-file")
   (setq powerline-default-separator 'utf-8)
-  ;; Turn off smartparens
-  (add-hook 'smartparens-enabled-hook #'spacemacs/toggle-smartparens-off)
-  (spacemacs/toggle-smartparens-globally-off)
-  (eval-after-load 'smartparens
-    '(progn
-       (sp-pair "(" nil :actions :rem)
-       (sp-pair "[" nil :actions :rem)
-       (sp-pair "'" nil :actions :rem)
-       (sp-pair "\"" nil :actions :rem)))
 
   (add-hook 'prog-mode-hook 'column-enforce-mode)
   (add-hook 'text-mode-hook 'column-enforce-mode)
