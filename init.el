@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     csv
      clojure
      yaml
      (auto-completion :variables
@@ -375,6 +376,10 @@ you should place your code here."
           "babel-out"
           "generated"
           "coverage"))
+
+  (add-hook 'web-mode-hook
+            (lambda ()
+              (setq web-mode-markup-indent-offset 2)))
 
   ;; Prevent multicursors from prompting all the time when using evil
   ;; commands
