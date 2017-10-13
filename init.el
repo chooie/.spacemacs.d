@@ -31,12 +31,11 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     csv
-     clojure
-     yaml
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t)
      better-defaults
+     clojure
+     csv
      docker
      emacs-lisp
      git
@@ -50,15 +49,12 @@ values."
             latex-enable-auto-fill nil)
      markdown
      org
-     (ranger :variables
-             ranger-show-preview  t
-             ranger-cleanup-eagerly t
-             ranger-show-dotfiles t
-             ranger-max-preview-size 10)
      react
      shell-scripts
      sql
      syntax-checking
+     typescript
+     yaml
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -147,11 +143,11 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("Fira Mono"
                                :size 12
                                :weight normal
                                :width normal
-                               :powerline-scale 1.2)
+                               :powerline-scale 1.0)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -256,11 +252,11 @@ values."
    ;; If non nil show the color guide hint for transient state keys. (default t)
    dotspacemacs-show-transient-state-color-guide t
    ;; If non nil unicode symbols are displayed in the mode line. (default t)
-   dotspacemacs-mode-line-unicode-symbols t
+   dotspacemacs-mode-line-unicode-symbols nil
    ;; If non nil smooth scrolling (native-scrolling) is enabled. Smooth
    ;; scrolling overrides the default behavior of Emacs which recenters point
    ;; when it reaches the top or bottom of the screen. (default t)
-   dotspacemacs-smooth-scrolling t
+   dotspacemacs-smooth-scrolling nil
    ;; Control line numbers activation.
    ;; If set to `t' or `relative' line numbers are turned on in all `prog-mode' and
    ;; `text-mode' derivatives. If set to `relative', line numbers are relative.
@@ -274,7 +270,7 @@ values."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers t
+   dotspacemacs-line-numbers nil
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -342,6 +338,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq custom-file ".spacemacs-custom-file")
   (setq powerline-default-separator 'utf-8)
+
   (add-hook 'prog-mode-hook 'column-enforce-mode)
   (add-hook 'text-mode-hook 'column-enforce-mode)
   (setq spacemacs-show-trailing-whitespace t)
