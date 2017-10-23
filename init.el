@@ -34,7 +34,8 @@ values."
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t)
      better-defaults
-     clojure
+     (clojure :variables
+              cljr-warn-on-eval nil)
      csv
      docker
      emacs-lisp
