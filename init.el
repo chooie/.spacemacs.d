@@ -144,7 +144,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Fira Mono"
+   dotspacemacs-default-font '("Roboto Mono Thin for Powerline Thin"
                                :size 12
                                :weight normal
                                :width normal
@@ -340,6 +340,10 @@ you should place your code here."
   (setq custom-file ".spacemacs-custom-file")
   (setq powerline-default-separator 'utf-8)
 
+  (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+  (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+  (if (fboundp 'menu-bar-mode) (menu-bar-mode 1))
+
   (add-hook 'prog-mode-hook 'column-enforce-mode)
   (add-hook 'text-mode-hook 'column-enforce-mode)
   (setq spacemacs-show-trailing-whitespace t)
@@ -404,5 +408,8 @@ you should place your code here."
 
   (setq TeX-view-program-selection '((output-pdf "PDF Viewer")))
   (setq TeX-view-program-list
-        '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b")))
+        '(("PDF Viewer"
+           (concatenate
+            "/Applications/Skim.app/Contents/SharedSupport/displayline "
+            "-b -g %n %o %b"))))
   )
