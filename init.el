@@ -383,6 +383,10 @@ you should place your code here."
             (lambda ()
               (setq web-mode-markup-indent-offset 2)))
 
+  ;; Aggressive indent
+  (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
+  (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+
   ;; Prevent multicursors from prompting all the time when using evil
   ;; commands
   (setq mc/cmds-to-run-for-all
