@@ -338,7 +338,15 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq custom-file ".spacemacs-custom-file")
-  (setq powerline-default-separator 'utf-8)
+
+  ;; Customize powerline
+  (setq powerline-default-separator 'nil)
+  (spaceline-toggle-minor-modes-off)
+  (spaceline-toggle-version-control-off)
+  (spaceline-toggle-hud-off)
+  (spaceline-toggle-purpose-off)
+  (spaceline-toggle-buffer-size-off)
+  (spaceline-toggle-buffer-encoding-abbrev-off)
 
   (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
   (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
