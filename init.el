@@ -377,7 +377,8 @@ you should place your code here."
         '("node_modules"
           "babel-out"
           "generated"
-          "coverage"))
+          "coverage"
+          "release"))
 
   (add-hook 'web-mode-hook
             (lambda ()
