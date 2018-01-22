@@ -348,6 +348,10 @@ you should place your code here."
   (spaceline-toggle-buffer-size-off)
   (spaceline-toggle-buffer-encoding-abbrev-off)
 
+  (set-face-attribute
+   'mode-line nil
+   :box nil)
+
   (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
   (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
   (if (fboundp 'menu-bar-mode) (menu-bar-mode 1))
