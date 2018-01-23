@@ -398,7 +398,9 @@ you should place your code here."
 
   ;; Aggressive indent
   (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
-  (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+  (add-hook 'clojure-mode-hook (lambda ()
+                                 (aggressive-indent-mode)
+                                 (put-clojure-indent 'fdef 'defun)))
 
   ;; Prevent multicursors from prompting all the time when using evil
   ;; commands
