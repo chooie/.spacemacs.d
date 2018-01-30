@@ -35,7 +35,11 @@ values."
                       auto-completion-enable-snippets-in-popup t)
      better-defaults
      (clojure :variables
-              cljr-warn-on-eval nil)
+              ;; WARNING: Don't use eval-based refactorings as it may break the
+              ;; reloaded workflow
+              cljr-eagerly-build-asts-on-startup nil
+              cljr-auto-clean-ns nil
+              cljr-warn-on-eval t)
      csv
      docker
      emacs-lisp
