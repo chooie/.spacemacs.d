@@ -343,6 +343,8 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq custom-file ".spacemacs-custom-file")
 
+  ;; Useful for stopping CMD-H from hiding emacs
+  (setq mac-pass-command-to-system nil)
   (savehist-mode -1)
 
   ;; Customize powerline
