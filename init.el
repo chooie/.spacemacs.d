@@ -387,6 +387,7 @@ you should place your code here."
     :config (message "Loaded groovy mode"))
   ;; automodes
   (add-to-list 'auto-mode-alist '("Jenkinsfile$" . groovy-mode))
+  (add-to-list 'auto-mode-alist '("\\.org\\.txt$" . org-mode))
   ;; Use 'mdfind' for searching instead of 'locate'
   (setq helm-locate-command "mdfind -name %s %s")
   (setq helm-locate-fuzzy-match nil)
