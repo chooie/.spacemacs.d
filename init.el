@@ -364,8 +364,11 @@ you should place your code here."
   (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
   (if (fboundp 'menu-bar-mode) (menu-bar-mode 1))
 
+  ;; Highlight text that exceeds 80 characters
   (add-hook 'prog-mode-hook 'column-enforce-mode)
   (add-hook 'text-mode-hook 'column-enforce-mode)
+  (add-hook 'feature-mode-hook 'column-enforce-mode)
+
   (setq spacemacs-show-trailing-whitespace t)
   (spacemacs/toggle-indent-guide-globally-on)
   (setq-default indent-tabs-mode nil)
