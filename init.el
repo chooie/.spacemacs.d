@@ -45,7 +45,8 @@ values."
      emacs-lisp
      git
      helm
-     html
+     (html :variables
+           css-indent-offset 2)
      (javascript :variables
                  js2-basic-offset 2
                  js-indent-level 2)
