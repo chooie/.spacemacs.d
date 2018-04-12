@@ -403,7 +403,8 @@ you should place your code here."
           "babel-out"
           "generated"
           "coverage"
-          "release"))
+          "release"
+          "vendor"))
 
   (add-hook 'web-mode-hook
             (lambda ()
