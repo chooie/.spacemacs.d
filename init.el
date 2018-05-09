@@ -53,7 +53,8 @@ values."
      (latex :variables
             latex-build-command "LatexMk"
             latex-enable-auto-fill nil)
-     markdown
+     (markdown :variables
+               markdown-live-preview-engine 'vmd)
      org
      react
      shell-scripts
