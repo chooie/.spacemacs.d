@@ -417,6 +417,9 @@ you should place your code here."
                                  (aggressive-indent-mode)
                                  (put-clojure-indent 'fdef 'defun)))
 
+  ;; Custom Keybinds
+  (global-set-key (kbd "<backtab>") 'indent-relative)
+
   ;; =============================================================
   ;; Multiple cursors evil compat (use emacs mode during mc)
   ;; =============================================================
