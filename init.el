@@ -412,7 +412,11 @@ you should place your code here."
 
   (add-hook 'web-mode-hook
             (lambda ()
-              (setq web-mode-markup-indent-offset 2)))
+              (setq web-mode-markup-indent-offset 2)
+              (setq web-mode-markup-indent-offset 2)
+              (setq web-mode-css-indent-offset 2)
+              (setq web-mode-code-indent-offset 2)
+              (setq web-mode-attr-indent-offset 2)))
 
   ;; Aggressive indent
   (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
