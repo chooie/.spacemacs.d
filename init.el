@@ -56,7 +56,6 @@ values."
      (markdown :variables
                markdown-live-preview-engine 'vmd)
      org
-     react
      shell-scripts
      sql
      syntax-checking
